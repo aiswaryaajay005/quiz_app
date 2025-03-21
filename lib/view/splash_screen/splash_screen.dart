@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:quiz_app/view/categories_screen/categories_screen.dart';
+import 'package:quiz_app/view/home_screen/home_screen.dart';
 import 'package:quiz_app/view/quiz_screen/quiz_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => CategoriesScreen()),
+        MaterialPageRoute(builder: (context) => HomeScreen()),
       );
     });
     // Future.delayed(Duration(seconds: 3)).then((value) {
@@ -34,7 +35,10 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: Text("Quiz App", style: TextStyle(color: Colors.white)),
+        child: Text(
+          "DarkNet Trivia",
+          style: TextStyle(color: Colors.white, fontSize: 60),
+        ),
       ),
     );
   }
